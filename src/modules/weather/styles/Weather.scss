@@ -7,10 +7,10 @@
     height: 100vh;
     max-height: 900px;
     border-radius: 40px;
-    background-image: linear-gradient(to top right, #4A91FF, #47BFDF);
+    background-image: linear-gradient(to top right, #4a91ff, #47bfdf);
     padding: 25px;
 
-    &>img {
+    & > img {
         width: 200px;
     }
 }
@@ -24,16 +24,35 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 5px;
+    border-radius: 20px;
+    // border: 2px solid;
 
     h2 {
-        font-size: 36px;
+        font-size: 40px;
         margin-bottom: 4px;
     }
 
-    .temperature {
-        font-size: 48px;
-        margin-bottom: 4px;
+    .current-temperature {
+        font-size: 80px;
+        margin-bottom: 16px;
+        margin-top: 20px;
+        text-shadow: 5px 5px 30px #000000;
+    }
+
+    .current-description {
+        margin-bottom: 24px;
+        font-size: 28px;
+    }
+
+    .current-environment {
+        margin-bottom: 8px;
+        display: flex;
+
+        & > span:not(:last-child) {
+            display: flex;
+            justify-content: center;
+            width: 50px;
+        }
     }
 }
 
@@ -66,5 +85,4 @@
 
 .wrapper-forecast-item.active {
     background-color: rgba($color: #fff, $alpha: 0.3);
-
 }
