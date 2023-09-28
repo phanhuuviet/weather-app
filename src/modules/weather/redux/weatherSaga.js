@@ -1,14 +1,14 @@
-import axios from "axios";
 import { call, put, takeLatest } from "redux-saga/effects";
-import { weatherGetError, weatherGetSuccess } from './weatherSlice'
+import { weatherGetError, weatherGetSuccess, weatherGetAction } from './weatherSlice'
 import { weatherAPI } from "../../../services/weatherAPI";
 
 function* getWeather(action) {
     try {
-        const res = yield call(weatherAPI.fetchWeather);
+        yield put(weatherGetAction());
+        const res = yield call(weatherAPI.fetchWeather, action.payload);
         yield put(weatherGetSuccess(res))
     } catch (error) {
-        yield put(weatherGetError(error))
+        yield put(weatherGetError(error.response))
     }
 }
 

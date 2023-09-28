@@ -6,7 +6,12 @@ import { useEffect } from 'react';
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch({ type: "GET_WEATHER" })
+    dispatch({
+      type: "GET_WEATHER",
+      payload: {
+        q: "Hanoi"
+      }
+    })
   }, [])
 
   return (
