@@ -12,7 +12,7 @@
     background-image: linear-gradient(to top right, #4a91ff, #47bfdf);
     padding: 25px;
 
-    &>img {
+    & > img {
         width: 200px;
     }
 }
@@ -37,7 +37,7 @@
         font-size: 80px;
         margin-bottom: 16px;
         margin-top: 20px;
-        text-shadow: -4px 8px 50px rgba(0, 0, 0, 1.10);
+        text-shadow: -4px 8px 50px rgba(0, 0, 0, 1.1);
     }
 
     .current-description {
@@ -50,7 +50,7 @@
         display: flex;
         align-items: center;
 
-        &>span:not(:last-child) {
+        & > span:not(:last-child) {
             display: flex;
             justify-content: center;
             width: 50px;
@@ -65,9 +65,9 @@
     right: 0px;
     padding: 20px 0;
     border-radius: 40px;
-    background: #2980B9;
-    background: -webkit-linear-gradient(to top, #9fc7e9, #6DD5FA, #2980B9);
-    background: linear-gradient(to bottom, #9fc7e9, #6DD5FA, #2980B9);
+    background: #2980b9;
+    background: -webkit-linear-gradient(to top, #9fc7e9, #6dd5fa, #2980b9);
+    background: linear-gradient(to bottom, #9fc7e9, #6dd5fa, #2980b9);
 
     .weather-forecast {
         padding: 0 10px;
@@ -94,4 +94,9 @@
     img {
         width: 70px;
     }
+}
+
+// ======= CUSTOM MUI =======
+.MuiAutocomplete-option.MuiBox-root {
+    padding: 0px !important;
 }

@@ -25,13 +25,13 @@ const Weather = props => {
 
     return (
         <div className='wrapper'>
+            <Search />
             {isLoading && !error ? <Backdrop
                 sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
                 open={isLoading}
             >
                 <CircularProgress color="inherit" />
             </Backdrop> : <>
-                <Search />
                 <img src={`https://openweathermap.org/img/wn/${currentWeather?.weather[0]?.icon}@2x.png`} alt={currentWeather?.weather?.description} />
                 <div className='wrapper-current-weather'>
                     <h2>{forecasts?.city?.name}</h2>
